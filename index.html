@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>道昱官网首页</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css">
+    <style>
+        * { margin: 0; padding: 0;}
+        body{
+            min-width: 1000px;
+        }
+        ul { list-style-type: none;}
+        .menu {position: absolute;
+            top: 0;
+            width: 100%; overflow: hidden;}
+        .logo { float: left; margin-top: 13px;
+            margin-left: 100px;}
+        .logo a { display: inline-block; }
+        .logo img{
+            height: 68px;}
+        .nav { float: right; margin-top: 30px; font-size: 0;
+            margin-right: 100px;}
+        .nav li { display: inline-block; margin-left: 30px;}
+        .nav a { display: inline-block; height: 30px; line-height: 30px; font-size: 14px; color: #fff; text-decoration: none;}
+        .nav a:hover ,.nav a.current { color: #f00;}
+        .section { text-align: center; background-repeat: no-repeat; background-size: cover; overflow: hidden;}
+        #section0 { background-image: url(img/bg1.jpg);}
+        #section1 { background-image: url(img/bg2.jpg);}
+        #section2 { background-image: url(img/bg3.jpg);}
+        #section3 { background-image: url(img/bg4.jpg);}
+
+
+        #fp-nav ul li a span, .fp-slidesNav ul li a span { background-color: #fff;}
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
+    <script>
+        $(function() {
+            $('#fullpage').fullpage({
+                navigation: true,
+                afterLoad: function(anchorLink, index){
+                    if(index == 2){
+                        $("#fp-nav ul li a span").css("background-color","#999")
+                    }else{
+                        $("#fp-nav ul li a span").css("background-color","#fff")
+                    }
+
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<div id="fullpage">
+    <div class="section" id="section0">
+            <div class="menu">
+                <h1 class="logo"><a href="http://www.dowebok.com/"><img src="img/logo.png" alt=""/></a></h1>
+                <ul class="nav">
+                    <li><a href="javascript:" class="current">首页</a></li>
+                    <li><a href="javascript:">时代</a></li>
+                    <li><a href="javascript:">品牌</a></li>
+                    <li><a href="javascript:">研发</a></li>
+                    <li><a href="javascript:">数字</a></li>
+                    <li><a href="javascript:">运营</a></li>
+                    <li><a href="javascript:">智库</a></li>
+                    <li><a href="javascript:">TEAM</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="section" id="section1">
+
+    </div>
+    <div class="section" id="section2">
+
+    </div>
+    <div class="section" id="section3">
+
+    </div>
+</div>
+
+</body>
+
+</html>
