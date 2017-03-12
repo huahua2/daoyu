@@ -190,7 +190,30 @@ ul {
 
 .banner3 {
   background-image: url(../img/banner3.jpg?v=1);
-  background-color: aquamarine;
+  .box{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    margin-top: -153px;
+    span{
+      display: inline-block;
+      background: url(../img/bg1.png?v=1) no-repeat -15px -724px;
+      width: 400px;
+      height: 304px;
+    }
+    span.camera{
+      position: absolute;
+      background-position: 0 -297px;
+      width: 543px;
+      height: 416px;
+      z-index: 2;
+      left: 50%;
+      margin-left: -272px;
+      top: 50%;
+      margin-top: -208px;
+    }
+  }
 }
 @media (max-width: 960px) and (max-height:700px) {
   .banner3 {
@@ -248,22 +271,40 @@ ul {
 
   }
   .banner2 {
-    .box{
+    .box {
       margin-top: -85px;
-      span{
+      span {
         background-position: -6px -103px;
         background-size: 437px 828px;
         width: 320px;
         height: 83px;
       }
-      div{
+      div {
         width: 320px;
       }
     }
-
   }
 
-}
+    .banner3 {
+      background-image: url(../img/banner3.jpg?v=1);
+      .box {
+        span {
+          background-position: -6px -549px;
+          background-size: 412px 780px;
+          width: 322px;
+          height: 304px;
+        }
+        span.camera {
+          background-position: 14px -224px;
+          width: 427px;
+          height: 318px;
+          margin-left: -221px;
+          margin-top: -198px;
+        }
+      }
+
+    }
+  }
 @media (max-width: 420px){
   .logo img {
     height: 52px;
