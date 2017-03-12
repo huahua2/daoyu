@@ -67,6 +67,7 @@ ul {
   background-position: 50% 50%;
   background-size: cover;
   overflow: hidden;
+
 }
 
 #section0 {
@@ -115,15 +116,15 @@ ul {
   background-size: cover;
   overflow: hidden;
   .box{
-    width: 100%;
     text-align: center;
+    padding: 0 5%;
+    position: relative;
   }
+
   u {
     margin: 0 5px;
     color: #d81e1f;
     text-decoration: none;
-    line-height: 30px;
-
   }
   .bottom{
     color: #ddd;
@@ -138,6 +139,22 @@ ul {
 
 .banner1 {
   background-image: url(../img/banner2.jpg?v=1);
+  .top{
+    top:214px;
+    text-align: center;
+    width:100%;
+    span{
+      display: inline-block;
+      background: url(../img/bg1.png?v=1) no-repeat -22px -12px;
+      width: 407px;
+      height: 95px;
+      margin-bottom: 30px;
+    }
+  }
+  .bottom{
+    font-size: 16px;
+    line-height: 27px;
+  }
 
 }
 
@@ -177,9 +194,9 @@ ul {
       float: left;
     }
   }
-  .menu{
-    height: 100%;
-  }
+  //.menu{
+  //  height: 100%;
+  //}
   .logo img {
     height: 60px;
   }
@@ -192,6 +209,20 @@ ul {
     width: 28px;
     display: block;
   }
+
+  .banner1 {
+    .top{
+      top:214px;
+      span{
+        background: url(../img/bg1.png?v=1) no-repeat  -15px -8px;
+        background-size:437px 828px ;
+        width: 343px;
+        height: 87px;
+      }
+    }
+
+  }
+
 }
 @media (max-width: 420px){
   .logo img {
@@ -205,6 +236,21 @@ ul {
     top: 30px;
     width: 25px;
     display: block;
+  }
+  .banner1 {
+    .top {
+      top: 200px;
+      span {
+        background: url(../img/bg1.png?v=1) no-repeat -13px -7px;
+        background-size: 332px 628px;
+        width: 248px;
+        height: 61px;
+      }
+    }
+    .bottom{
+      font-size: 13px;
+      line-height: 22px;
+    }
   }
 }
 

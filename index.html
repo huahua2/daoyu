@@ -30,9 +30,11 @@
             })
             $("#shoumenu").click(function(){
                 $(".nav").show().attr("show",1);
+                $(".menu").css("height","100%");
             })
             $("#nav").click(function(){
                 $(".nav").hide().attr("show",0);
+                $(".menu").css("height","");
             })
             $("#nav li a").click(function(e){
                 e.stopPropagation()
@@ -81,8 +83,8 @@
             </div>
         <div class="slide banner1">
             <div class="box">
-                <div class="top"><span>先入为主，布局未来</span><i></i></div>
-                <div class="bottom">全面布局<u>PC</u>端与<u>移动</u>端<br>抢占头等商机<br>基于<u>HTML5</u>响应式布局，智能识别多种终端设备</div>
+                <div class="top"><span></span></div>
+                <div class="bottom">全面布局<u>PC</u>端与<u>移动</u>端<br>抢占<u>头等</u>商机<br>基于<u>HTML5</u>响应式布局，智能识别多种终端设备</div>
             </div>
         </div>
         <div class="slide banner2">
