@@ -122,11 +122,8 @@ ul {
     position: relative;
     opacity: 0;
     top: -100px;
-    -webkit-transition: all .3s linear 0s;
-    -moz-transition: all .3s linear 0s;
-    -ms-transition: all .3s linear 0s;
-    -o-transition: all .3s linear 0s;
-    transition: all .3s linear 0s; }
+    -webkit-transition: all .3s linear 0.2s;
+    transition: all .3s linear 0.2s; }
     .banner1 .top span {
       display: inline-block;
       background: url(../img/bg1.png?v=1) no-repeat -22px -12px;
@@ -135,9 +132,14 @@ ul {
       margin-bottom: 30px; }
   .banner1 .bottom {
     font-size: 16px;
-    line-height: 27px; }
+    line-height: 27px;
+    position: relative;
+    top: -128px;
+    opacity: 0;
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s; }
 
-.huahua .banner1 .box .top {
+.animate .banner1 .top, .animate .banner1 .bottom {
   top: 0px;
   -moz-opacity: 1;
   opacity: 1; }

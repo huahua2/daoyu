@@ -152,11 +152,8 @@ ul {
     position: relative;
     opacity: 0;
     top: -100px;
-    -webkit-transition: all .3s linear 0s;
-    -moz-transition: all .3s linear 0s;
-    -ms-transition: all .3s linear 0s;
-    -o-transition: all .3s linear 0s;
-    transition: all .3s linear 0s;
+    -webkit-transition: all .3s linear 0.2s;
+    transition: all .3s linear 0.2s;
 
     span{
       display: inline-block;
@@ -170,14 +167,23 @@ ul {
   .bottom{
     font-size: 16px;
     line-height: 27px;
+    position: relative;
+    top: -128px;
+    opacity: 0;
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s;
   }
 
 }
 
-.huahua .banner1 .box .top {
-  top: 0px;
-  -moz-opacity: 1;
-  opacity: 1;
+.animate {
+  .banner1 {
+    .top,.bottom {
+      top: 0px;
+      -moz-opacity: 1;
+      opacity: 1;
+    }
+  }
 }
 
 .banner2 {
