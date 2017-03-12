@@ -5,37 +5,145 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>道昱官网首页</title>
-    <link rel="stylesheet" href="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css">
+
     <link rel="shortcut icon" href="favicon.ico" />
+    <style>
+        .loading{
+           position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+            background: #313131;
+
+        }
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -22px;
+            margin-left: -22px;
+        }
+        @-webkit-keyframes line-scale-party {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1); }
+
+            50% {
+                -webkit-transform: scale(0.5);
+                transform: scale(0.5); }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1); } }
+
+        @keyframes line-scale-party {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1); }
+
+            50% {
+                -webkit-transform: scale(0.5);
+                transform: scale(0.5); }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1); } }
+
+        .line-scale-party > div:nth-child(1) {
+            -webkit-animation-delay: 0.77s;
+            animation-delay: 0.77s;
+            -webkit-animation-duration: 1.26s;
+            animation-duration: 1.26s; }
+        .line-scale-party > div:nth-child(2) {
+            -webkit-animation-delay: 0.29s;
+            animation-delay: 0.29s;
+            -webkit-animation-duration: 0.43s;
+            animation-duration: 0.43s; }
+        .line-scale-party > div:nth-child(3) {
+            -webkit-animation-delay: 0.28s;
+            animation-delay: 0.28s;
+            -webkit-animation-duration: 1.01s;
+            animation-duration: 1.01s; }
+        .line-scale-party > div:nth-child(4) {
+            -webkit-animation-delay: 0.74s;
+            animation-delay: 0.74s;
+            -webkit-animation-duration: 0.73s;
+            animation-duration: 0.73s; }
+        .line-scale-party > div {
+            background-color: #fff;
+            width: 4px;
+            height: 35px;
+            border-radius: 2px;
+            margin: 2px;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            display: inline-block;
+            -webkit-animation-name: line-scale-party;
+            animation-name: line-scale-party;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-delay: 0;
+            animation-delay: 0; }
+    </style>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css">
     <link rel="stylesheet" href="css/main.css"/>
     <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
     <script>
-        $(function() {
-            $('#fullpage').fullpage({
-                navigation: true,
-                slidesNavigation: true,
-                controlArrows: false,
-                css3:true,
-                loopBottom: true,
-                navigation: false,
-                afterLoad: function(anchorLink, index){
-                    if(index == 2){
-                        $("#fp-nav ul li a span").css("background-color","#999")
-                    }else{
-                        $("#fp-nav ul li a span").css("background-color","#fff")
-                    }
-                    setTimeout(function(){
-                        $($("#fullpage > div")[index-1]).addClass("animate");
-                    },500)
+        $(function(){
 
-                },
-                afterSlideLoad:function(anchorLink,index,i,slideIndex){
-                    setTimeout(function(){
-                        $($("#section0 .slide")[index]).addClass("animate");
-                    },500)
-               }
-            })
+
+        var   n = new Date(),
+                d = n.getTime(),
+                N = function () {
+                    var e = ["img/banner1.jpg","img/banner2.jpg","img/banner3.jpg","img/bg1.png","img/bg2.jpg","img/bg3.jpg","img/bg4.jpg","img/logo.png","img/menu.png"],
+                            t = e.length,
+                            n = 0,
+                            r = function (e) {
+                                var r = new Image,
+                                        D = new Date().getTime();
+
+                                r.onload = function () {
+                                    ++n,
+                                    console.log(parseInt(n / t * 100) + "%");
+                                    if(parseInt(n / t * 100) == 100 || D-d > 10000){
+                                        console.log("加载完毕");
+                                        $(".loading").hide();
+                                        $('#fullpage').fullpage({
+                                            navigation: true,
+                                            slidesNavigation: true,
+                                            controlArrows: false,
+                                            css3:true,
+                                            loopBottom: true,
+                                            navigation: false,
+                                            afterLoad: function(anchorLink, index){
+                                                if(index == 2){
+                                                    $("#fp-nav ul li a span").css("background-color","#999")
+                                                }else{
+                                                    $("#fp-nav ul li a span").css("background-color","#fff")
+                                                }
+                                                setTimeout(function(){
+                                                    $($("#fullpage > div")[index-1]).addClass("animate");
+                                                },500)
+
+                                            },
+                                            afterSlideLoad:function(anchorLink,index,i,slideIndex){
+                                                setTimeout(function(){
+                                                    $($("#section0 .slide")[index]).addClass("animate");
+                                                },500)
+                                            }
+                                        })
+
+                                    }
+
+                                },
+                                        r.src = e;
+                            };
+                    for (var i = 0; i < t; ++i) r(e[i]);
+                }();
+
             $("#shoumenu").click(function(){
                 $(".nav").show().attr("show",1);
                 $(".menu").css("height","100%");
@@ -59,18 +167,22 @@
                     }
                 }
             }
+        })
 
-//            setInterval(function(){
-//                $.fn.fullpage.moveSlideRight();
-//            }, 5000);
-
-
-        });
     </script>
 </head>
 
 <body>
-
+<div class="loading">
+<div class="loader">
+    <div class="loader-inner line-scale-party">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+</div>
 <div id="fullpage">
     <div class="section" id="section0">
 
