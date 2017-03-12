@@ -25,8 +25,16 @@
                     }else{
                         $("#fp-nav ul li a span").css("background-color","#fff")
                     }
+                    setTimeout(function(){
+                        $($("#fullpage > div")[index-1]).addClass("huahua");
+                    },500)
 
-                }
+                },
+                afterSlideLoad:function(anchorLink,index,i,slideIndex){
+                    setTimeout(function(){
+                        $($("#section0 .slide")[index]).addClass("huahua");
+                    },500)
+               }
             })
             $("#shoumenu").click(function(){
                 $(".nav").show().attr("show",1);

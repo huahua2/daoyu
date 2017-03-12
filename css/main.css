@@ -8,6 +8,9 @@ body {
 ul {
   list-style-type: none; }
 
+.fp-tableCell {
+  display: block; }
+
 .menu {
   position: fixed;
   top: 0;
@@ -92,8 +95,7 @@ ul {
   background-size: cover;
   overflow: hidden; }
   .slide .box {
-    text-align: center;
-    position: relative; }
+    text-align: center; }
   .slide u {
     margin: 0 5px;
     color: #d81e1f;
@@ -111,10 +113,20 @@ ul {
 
 .banner1 {
   background-image: url(../img/banner2.jpg?v=1); }
+  .banner1 .box {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -104px; }
   .banner1 .top {
-    top: 214px;
-    text-align: center;
-    width: 100%; }
+    position: relative;
+    opacity: 0;
+    top: -100px;
+    -webkit-transition: all .3s linear 0s;
+    -moz-transition: all .3s linear 0s;
+    -ms-transition: all .3s linear 0s;
+    -o-transition: all .3s linear 0s;
+    transition: all .3s linear 0s; }
     .banner1 .top span {
       display: inline-block;
       background: url(../img/bg1.png?v=1) no-repeat -22px -12px;
@@ -124,6 +136,11 @@ ul {
   .banner1 .bottom {
     font-size: 16px;
     line-height: 27px; }
+
+.huahua .banner1 .box .top {
+  top: 0px;
+  -moz-opacity: 1;
+  opacity: 1; }
 
 .banner2 {
   background-image: url(../img/banner1.jpg?v=2); }
@@ -207,13 +224,13 @@ ul {
     width: 28px;
     display: block; }
 
-  .banner1 .top {
-    top: 214px; }
-    .banner1 .top span {
-      background-position: -15px -8px;
-      background-size: 437px 828px;
-      width: 343px;
-      height: 87px; }
+  .banner1 .box {
+    margin-top: -100px; }
+  .banner1 .top span {
+    background-position: -15px -8px;
+    background-size: 437px 828px;
+    width: 343px;
+    height: 87px; }
 
   .banner2 .box {
     margin-top: -85px; }
@@ -249,20 +266,21 @@ ul {
     width: 25px;
     display: block; }
 
-  .banner1 .top {
-    top: 200px; }
-    .banner1 .top span {
-      background-position: -13px -7px;
-      background-size: 332px 628px;
-      width: 248px;
-      height: 61px;
-      margin-bottom: 20px; }
+  .banner1 .box {
+    margin-top: -75px; }
+  .banner1 .top span {
+    background-position: -13px -7px;
+    background-size: 332px 628px;
+    width: 248px;
+    height: 61px;
+    margin-bottom: 20px; }
   .banner1 .bottom {
+    position: relative;
     font-size: 13px;
     line-height: 22px; }
 
   .banner2 .box {
-    margin-top: -113px; }
+    margin-top: -65px; }
     .banner2 .box span {
       background-position: 6px -77px;
       background-size: 332px 628px;

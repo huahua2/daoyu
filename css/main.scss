@@ -10,7 +10,9 @@ body {
 ul {
   list-style-type: none;
 }
-
+.fp-tableCell{
+  display: block;
+}
 .menu {
   position: fixed;
   top: 0;
@@ -117,8 +119,6 @@ ul {
   overflow: hidden;
   .box{
     text-align: center;
-    //padding: 0 5%;
-    position: relative;
   }
 
   u {
@@ -139,12 +139,25 @@ ul {
   position: relative;
 }
 
+
 .banner1 {
   background-image: url(../img/banner2.jpg?v=1);
+  .box{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -104px;
+  }
   .top{
-    top:214px;
-    text-align: center;
-    width:100%;
+    position: relative;
+    opacity: 0;
+    top: -100px;
+    -webkit-transition: all .3s linear 0s;
+    -moz-transition: all .3s linear 0s;
+    -ms-transition: all .3s linear 0s;
+    -o-transition: all .3s linear 0s;
+    transition: all .3s linear 0s;
+
     span{
       display: inline-block;
       background: url(../img/bg1.png?v=1) no-repeat -22px -12px;
@@ -153,11 +166,18 @@ ul {
       margin-bottom: 30px;
     }
   }
+
   .bottom{
     font-size: 16px;
     line-height: 27px;
   }
 
+}
+
+.huahua .banner1 .box .top {
+  top: 0px;
+  -moz-opacity: 1;
+  opacity: 1;
 }
 
 .banner2 {
@@ -259,8 +279,10 @@ ul {
   }
 
   .banner1 {
+    .box{
+      margin-top: -100px;
+    }
     .top{
-      top:214px;
       span{
         background-position:  -15px -8px;
         background-size:437px 828px ;
@@ -318,8 +340,11 @@ ul {
     display: block;
   }
   .banner1 {
+    .box{
+      margin-top: -75px;
+    }
     .top {
-      top: 200px;
+
       span {
         background-position: -13px -7px;
         background-size: 332px 628px;
@@ -328,14 +353,16 @@ ul {
         margin-bottom: 20px;
       }
     }
+
     .bottom{
+      position: relative;
       font-size: 13px;
       line-height: 22px;
     }
   }
   .banner2 {
     .box{
-      margin-top: -113px;
+      margin-top: -65px;
       span{
         background-position: 6px -77px;
         background-size: 332px 628px;
