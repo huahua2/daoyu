@@ -225,19 +225,17 @@ ul {
     .banner2 .box div {
       width: 320px; }
 
-  .banner3 {
-    background-image: url(../img/banner3.jpg?v=1); }
-    .banner3 .box span {
-      background-position: -6px -549px;
-      background-size: 412px 780px;
-      width: 322px;
-      height: 304px; }
-    .banner3 .box span.camera {
-      background-position: 14px -224px;
-      width: 427px;
-      height: 318px;
-      margin-left: -221px;
-      margin-top: -198px; } }
+  .banner3 .box span {
+    background-position: -23px -492px;
+    background-size: 370px 700px;
+    width: 256px;
+    height: 210px; }
+  .banner3 .box span.camera {
+    background-position: 0px -201px;
+    width: 371px;
+    height: 288px;
+    margin-left: -185px;
+    margin-top: -144px; } }
 @media (max-width: 420px) {
   .logo img {
     height: 52px; }
@@ -271,7 +269,20 @@ ul {
       width: 262px;
       height: 63px; }
     .banner2 .box div {
-      width: 264px; } }
+      width: 264px; }
+
+  .banner3 .box span {
+    background-position: -23px -422px;
+    background-size: 317px 600px;
+    width: 214px;
+    height: 179px; }
+  .banner3 .box span.camera {
+    background-size: 291px 550px;
+    background-position: 25px -157px;
+    width: 318px;
+    height: 227px;
+    margin-left: -173px;
+    margin-top: -114px; } }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background-color: #fff; }
 

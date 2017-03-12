@@ -286,20 +286,19 @@ ul {
   }
 
     .banner3 {
-      background-image: url(../img/banner3.jpg?v=1);
       .box {
         span {
-          background-position: -6px -549px;
-          background-size: 412px 780px;
-          width: 322px;
-          height: 304px;
+          background-position: -23px -492px;
+          background-size: 370px 700px;
+          width: 256px;
+          height: 210px;
         }
         span.camera {
-          background-position: 14px -224px;
-          width: 427px;
-          height: 318px;
-          margin-left: -221px;
-          margin-top: -198px;
+          background-position: 0px -201px;
+          width: 371px;
+          height: 288px;
+          margin-left: -185px;
+          margin-top: -144px;
         }
       }
 
@@ -349,6 +348,25 @@ ul {
       //p{
       //  text-align: center;
       //}
+    }
+
+  }
+  .banner3 {
+    .box {
+      span {
+        background-position: -23px -422px;
+        background-size: 317px 600px;
+        width: 214px;
+        height: 179px;
+      }
+      span.camera {
+        background-size: 291px 550px;
+        background-position: 25px -157px;
+        width: 318px;
+        height: 227px;
+        margin-left: -173px;
+        margin-top: -114px;
+      }
     }
 
   }
