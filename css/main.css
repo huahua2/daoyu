@@ -262,7 +262,7 @@ ul {
     line-height: 22px; }
 
   .banner2 .box {
-    margin-top: -85px; }
+    margin-top: -113px; }
     .banner2 .box span {
       background-position: 6px -77px;
       background-size: 332px 628px;
@@ -271,18 +271,20 @@ ul {
     .banner2 .box div {
       width: 264px; }
 
-  .banner3 .box span {
-    background-position: -23px -422px;
-    background-size: 317px 600px;
-    width: 214px;
-    height: 179px; }
-  .banner3 .box span.camera {
-    background-size: 291px 550px;
-    background-position: 25px -157px;
-    width: 318px;
-    height: 227px;
-    margin-left: -173px;
-    margin-top: -114px; } }
+  .banner3 .box {
+    margin-top: -108px; }
+    .banner3 .box span {
+      background-position: -23px -422px;
+      background-size: 317px 600px;
+      width: 214px;
+      height: 179px; }
+    .banner3 .box span.camera {
+      background-size: 291px 550px;
+      background-position: 25px -157px;
+      width: 318px;
+      height: 227px;
+      margin-left: -173px;
+      margin-top: -114px; } }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background-color: #fff; }
 
