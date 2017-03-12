@@ -93,7 +93,6 @@ ul {
   overflow: hidden; }
   .slide .box {
     text-align: center;
-    padding: 0 5%;
     position: relative; }
   .slide u {
     margin: 0 5px;
@@ -107,7 +106,8 @@ ul {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .banner1 {
   background-image: url(../img/banner2.jpg?v=1); }
@@ -127,6 +127,25 @@ ul {
 
 .banner2 {
   background-image: url(../img/banner1.jpg?v=2); }
+  .banner2 .box {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    margin-top: -85px; }
+    .banner2 .box span {
+      display: inline-block;
+      background: url(../img/bg1.png?v=1) no-repeat -8px -129px;
+      width: 396px;
+      height: 102px; }
+    .banner2 .box div {
+      display: inline-block;
+      width: 396px; }
+    .banner2 .box p {
+      text-align: right;
+      color: #dddddd;
+      font-size: 12px;
+      margin-bottom: 10px; }
 
 .banner3 {
   background-image: url(../img/banner3.jpg?v=1);
@@ -171,10 +190,20 @@ ul {
   .banner1 .top {
     top: 214px; }
     .banner1 .top span {
-      background: url(../img/bg1.png?v=1) no-repeat -15px -8px;
+      background-position: -15px -8px;
       background-size: 437px 828px;
       width: 343px;
-      height: 87px; } }
+      height: 87px; }
+
+  .banner2 .box {
+    margin-top: -85px; }
+    .banner2 .box span {
+      background-position: -6px -103px;
+      background-size: 437px 828px;
+      width: 320px;
+      height: 83px; }
+    .banner2 .box div {
+      width: 320px; } }
 @media (max-width: 420px) {
   .logo img {
     height: 52px; }
@@ -191,13 +220,24 @@ ul {
   .banner1 .top {
     top: 200px; }
     .banner1 .top span {
-      background: url(../img/bg1.png?v=1) no-repeat -13px -7px;
+      background-position: -13px -7px;
       background-size: 332px 628px;
       width: 248px;
-      height: 61px; }
+      height: 61px;
+      margin-bottom: 20px; }
   .banner1 .bottom {
     font-size: 13px;
-    line-height: 22px; } }
+    line-height: 22px; }
+
+  .banner2 .box {
+    margin-top: -85px; }
+    .banner2 .box span {
+      background-position: -3px -78px;
+      background-size: 332px 628px;
+      width: 246px;
+      height: 63px; }
+    .banner2 .box div {
+      width: 246px; } }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background-color: #fff; }
 
