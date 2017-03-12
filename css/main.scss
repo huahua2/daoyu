@@ -17,6 +17,14 @@ ul {
   width: 100%;
   overflow: hidden;
   z-index: 10;
+
+}
+.smenu{
+  position: absolute;
+  right: 40px;
+  top: 26px;
+  width: 35px;
+  display: none;
 }
 
 .logo {
@@ -70,17 +78,17 @@ ul {
     -moz-opacity: 0;
     opacity: 0;
     filter: alpha(opacity=0);
-    -webkit-transition: all .5s ease-in-out 0s;
-    -moz-transition: all .5s ease-in-out 0s;
-    -ms-transition: all .5s ease-in-out 0s;
-    -o-transition: all .5s ease-in-out 0s;
-    transition:all .5s ease-in-out 0s;
+    -webkit-transition: all .5s ease-in-out .3s;
+    -moz-transition: all .5s ease-in-out .3s;
+    -ms-transition: all .5s ease-in-out .3s;
+    -o-transition: all .5s ease-in-out .3s;
+    transition:all .5s ease-in-out .3s;
   }
   .active .shade {
     width: 50%;
-    -moz-opacity: 0.6;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
   }
 }
 
@@ -106,6 +114,21 @@ ul {
   background-position: 50% 50%;
   background-size: cover;
   overflow: hidden;
+  .box{
+    width: 100%;
+    text-align: center;
+  }
+  u {
+    margin: 0 5px;
+    color: #d81e1f;
+    text-decoration: none;
+    line-height: 30px;
+
+  }
+  .bottom{
+    color: #ddd;
+    font-size: 16px;
+  }
 }
 .slide {
   background-repeat: no-repeat;
@@ -114,7 +137,9 @@ ul {
   overflow: hidden; }
 
 .banner1 {
-  background-image: url(../img/banner2.jpg?v=1); }
+  background-image: url(../img/banner2.jpg?v=1);
+
+}
 
 .banner2 {
   background-image: url(../img/banner1.jpg?v=2);
@@ -133,6 +158,27 @@ ul {
 @media (max-width: 860px){
   .nav {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    z-index: 10;
+    background: #000;
+    opacity: .8;
+    margin-top: 0;
+    padding-top: 100px;
+    li {
+      display: inline-block;
+      width: 50%;
+      margin-left: 0;
+      margin-top: 25px;
+      float: left;
+    }
+  }
+  .menu{
+    height: 100%;
   }
   .logo img {
     height: 60px;
@@ -140,16 +186,25 @@ ul {
   .logo{
     margin-left: 40px;
   }
+  .smenu{
+    right: 30px;
+    top: 27px;
+    width: 27px;
+    display: block;
+  }
 }
 @media (max-width: 420px){
-  .nav {
-    display: none;
-  }
   .logo img {
     height: 52px;
   }
   .logo{
-    margin-left: 30px;
+    margin-left: 22px;
+  }
+  .smenu{
+    right: 30px;
+    top: 30px;
+    width: 22px;
+    display: block;
   }
 }
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>道昱官网首页</title>
     <link rel="stylesheet" href="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css">
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/main.css"/>
     <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
@@ -16,8 +17,8 @@
                 slidesNavigation: true,
                 controlArrows: false,
                 css3:true,
-                scrollingSpeed:700,
-                autoScrolling:true,
+                loopBottom: true,
+                navigation: false,
                 afterLoad: function(anchorLink, index){
                     if(index == 2){
                         $("#fp-nav ul li a span").css("background-color","#999")
@@ -27,6 +28,27 @@
 
                 }
             })
+            $("#shoumenu").click(function(){
+                $(".nav").show().attr("show",1);
+            })
+            $("#nav").click(function(){
+                $(".nav").hide().attr("show",0);
+            })
+            $("#nav li a").click(function(e){
+                e.stopPropagation()
+            })
+            window.onresize=function() {
+                var w=$(window).width()
+                if (w >=860) {
+                    $(".nav").show();
+                }else{
+                    var status=$(".nav").attr("show");
+                    if(status!="1") {
+                        $(".nav").hide();
+                    }
+                }
+            }
+
 //            setInterval(function(){
 //                $.fn.fullpage.moveSlideRight();
 //            }, 5000);
@@ -40,9 +62,10 @@
 
 <div id="fullpage">
     <div class="section" id="section0">
+
             <div class="menu">
                 <h1 class="logo"><a href="/"><img src="img/logo.png" alt=""/></a></h1>
-                <ul class="nav">
+                <ul class="nav" id="nav">
                     <li><a href="javascript:" class="current">首页</a></li>
                     <li><a href="javascript:">时代</a></li>
                     <li><a href="javascript:">品牌</a></li>
@@ -50,11 +73,17 @@
                     <li><a href="javascript:">数字</a></li>
                     <li><a href="javascript:">运营</a></li>
                     <li><a href="javascript:">智库</a></li>
-                    <li><a href="javascript:">TEAM</a></li>
+                    <li><a href="http://baidu.com">TEAM</a></li>
                 </ul>
+                <a href="javascript:;" id="shoumenu"  >
+                    <img class="smenu" src="img/menu.png" alt=""/>
+                </a>
             </div>
         <div class="slide banner1">
-
+            <div class="box">
+                <div class="top"><span>先入为主，布局未来</span><i></i></div>
+                <div class="bottom">全面布局<u>PC</u>端与<u>移动</u>端<br>抢占头等商机<br>基于<u>HTML5</u>响应式布局，智能识别多种终端设备</div>
+            </div>
         </div>
         <div class="slide banner2">
             <div class="shade"></div>
