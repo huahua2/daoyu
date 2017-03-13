@@ -70,6 +70,14 @@ $(function(){
     $("#nav li a").click(function(e){
         e.stopPropagation()
     })
+    $(".business .change li").click(function(){
+        var  idx=$(this).index();
+        $(this).find("a").addClass("on");
+        $(this).siblings().find("a").removeClass();
+        var slength=$(window).width() >=860 ? (idx*-700)+"px" : (idx*-100)+"%";
+        $(".scrolldiv").animate({ "left": slength}, "linear");
+
+    })
     window.onresize=function() {
         var w=$(window).width()
         if (w >=860) {
@@ -81,5 +89,8 @@ $(function(){
                 $(".nav").hide();
             }
         }
+        $(".business .change li:eq(0) a").addClass("on");
+        $(".business .change li:eq(0)").siblings().find("a").removeClass();
+        $(".scrolldiv").css("left","0")
     }
 })

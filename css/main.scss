@@ -107,6 +107,7 @@ img{
 
 #section2 {
   background-image: url(../img/bg3.jpg);
+  background-position: 62% 50%;
 }
 
 #section3 {
@@ -246,12 +247,110 @@ img{
     }
   }
 }
+
+.business{
+  width: 800px;
+  position: relative;
+  margin: 0 auto;
+  top: 300px;
+  ul{
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    //margin-top: -100px;
+  }
+  li a{
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: solid 2px transparent;
+    &.on{
+      border-bottom: solid 2px #cf2223;
+    }
+  }
+  .right{
+    //background: #ddd;
+    margin-left: 206px;
+    p{
+      color: #eeeeee;
+      font-size: 12px;
+      &.p1{
+        font-size: 16px;
+      }
+      &.p2{
+        font-size: 14px;
+      }
+      margin-bottom: 15px;
+    }
+    float: left;
+    width: 700px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    .con1,.con2,.con3,.con4{
+      //margin-top: 130px;
+    }
+
+    .scrolldiv{
+      div{
+        height: 500px;
+        width: 700px;
+        float: left;
+      }
+      position: absolute;
+      top: 0;
+      width: 3000px;
+      left: 0;
+    }
+  }
+
+
+}
+
 @media (max-width: 960px) and (max-height:700px) {
   .banner3 {
     background-position:  55% 60%;
   }
 }
 @media (max-width: 860px){
+  .business{
+    width: 100%;
+    top: 0;
+    ul {
+      position: inherit;
+      top: 100px;
+      margin-top: 0;
+    }
+
+    .right{
+      width: 100%;
+      top: 120px;
+      margin-left: 0;
+      .scrolldiv{
+        width: 400%;
+        div{
+          width: 25%;
+        }
+        p{
+          padding: 0 10%;
+        }
+      }
+    }
+  }
+  .change{
+    width: 100%;
+    li{
+      width: 25%;
+      float: left;
+      text-align: center;
+    }
+  }
   .nav {
     display: none;
     position: absolute;
@@ -273,9 +372,7 @@ img{
       float: left;
     }
   }
-  //.menu{
-  //  height: 100%;
-  //}
+
   .logo img {
     height: 60px;
   }
@@ -317,26 +414,25 @@ img{
       }
     }
   }
-
-    .banner3 {
-      .box {
-        span {
-          background-position: -23px -492px;
-          background-size: 370px 700px;
-          width: 256px;
-          height: 210px;
-        }
-        span.camera {
-          background-position: 0px -201px;
-          width: 371px;
-          height: 288px;
-          margin-left: -185px;
-          margin-top: -144px;
-        }
+  .banner3 {
+    .box {
+      span {
+        background-position: -23px -492px;
+        background-size: 370px 700px;
+        width: 256px;
+        height: 210px;
       }
-
+      span.camera {
+        background-position: 0px -201px;
+        width: 371px;
+        height: 288px;
+        margin-left: -185px;
+        margin-top: -144px;
+      }
     }
+
   }
+}
 @media (max-width: 420px){
   .logo img {
     height: 52px;
