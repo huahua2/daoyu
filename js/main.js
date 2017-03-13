@@ -29,9 +29,15 @@ $(function(){
                                 navigation: false,
                                 afterLoad: function(anchorLink, index){
                                     if(index == 2){
-                                        $("#fp-nav ul li a span").css("background-color","#999")
+                                        $("#fp-nav ul li a span").css("background-color","#999");
+
                                     }else{
                                         $("#fp-nav ul li a span").css("background-color","#fff")
+                                    }
+                                    if(index==1){
+                                        $(".menu").css("background-color","")
+                                    }else{
+                                        $(".menu").css("background-color","rgba(0,0,0,0.6)")
                                     }
                                     setTimeout(function(){
                                         $($("#fullpage > div")[index-1]).addClass("animate");
