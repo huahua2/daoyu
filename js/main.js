@@ -7,7 +7,7 @@ $(function(){
     var   n = new Date(),
         d = n.getTime(),
         N = function () {
-            var e = ["img/banner1.jpg","img/banner2.jpg","img/banner3.jpg","img/bg1.png","img/bg2.jpg","img/bg3.jpg","img/bg4.jpg","img/logo.png","img/menu.png","img/technology.png","img/contact.png","img/lzx.png"],
+            var e = ["img/banner1.jpg","img/banner2.jpg","img/banner3.jpg","img/bg1.png","img/bg2.jpg","img/bg3.jpg","img/bg4.jpg","img/logo.png","img/menu.png","img/technology.png","img/contact.png","img/lzx.png","img/bg2_2.jpg","img/bg2-c2.png","img/sj.png"],
                 t = e.length,
                 n = 0,
                 r = function (e) {
