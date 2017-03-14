@@ -79,26 +79,6 @@ img{
 
 #section0 {
 
-  .shade {
-    width: 100%;
-    height: 100%;
-    background: #000;
-    -moz-opacity: 0;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: all .5s ease-in-out .3s;
-    -moz-transition: all .5s ease-in-out .3s;
-    -ms-transition: all .5s ease-in-out .3s;
-    -o-transition: all .5s ease-in-out .3s;
-    transition:all .5s ease-in-out .3s;
-  }
-  .active .shade {
-    width: 50%;
-    -moz-opacity: 0.5;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-  }
-
 }
 
 #section1 {
@@ -187,6 +167,19 @@ img{
 
 .banner2 {
   background-image: url(../img/banner1.jpg?v=2);
+  .shade {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .5s ease-in-out .3s;
+    -moz-transition: all .5s ease-in-out .3s;
+    -ms-transition: all .5s ease-in-out .3s;
+    -o-transition: all .5s ease-in-out .3s;
+    transition:all .5s ease-in-out .3s;
+  }
   .box{
     opacity: 0;
     position: absolute;
@@ -238,6 +231,7 @@ img{
       margin-left: -272px;
       top: 50%;
       margin-top: -208px;
+      //opacity: 0;
     }
   }
 }
@@ -568,6 +562,32 @@ img{
   -webkit-animation-name: fadeInUpBig;
   animation-name: fadeInUpBig
 }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3,.3,.3);
+    transform: scale3d(.3,.3,.3)
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3,.3,.3);
+    -ms-transform: scale3d(.3,.3,.3);
+    transform: scale3d(.3,.3,.3)
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
 .animate {
   .banner1 {
     .top, .bottom {
@@ -576,14 +596,32 @@ img{
       opacity: 1;
     }
   }
-}
-.active{
   &.banner2 {
+
+    .shade {
+      width: 50%;
+      -moz-opacity: 0.5;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+    }
     .box {
 
-      animation:fadeInLeft .5s both 0.4s;
-      -webkit-animation:fadeInLeft .5s both 0.4s;
+      animation:fadeInLeft .5s both 0.3s;
+      -webkit-animation:fadeInLeft .5s both 0.3s;
 
+    }
+  }
+  &.banner3 {
+    .box{
+      span.camera{
+
+        animation: zoomIn 1s linear 0s 2;
+        -webkit-animation: zoomIn 1s linear 0s 2;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+      }
     }
   }
 }

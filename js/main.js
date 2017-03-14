@@ -39,15 +39,24 @@ $(function(){
                                     }else{
                                         $(".menu").css("background-color","rgba(0,0,0,0.6)")
                                     }
-                                    setTimeout(function(){
-                                        $($("#fullpage > div")[index-1]).addClass("animate");
-                                    },500)
+                                    if(index-1==0) {
+                                        setTimeout(function () {
+                                            $($("#fullpage > div")[index - 1]).addClass("animate");
+                                        }, 500)
+                                    }else{
+                                            $($("#fullpage > div")[index - 1]).addClass("animate");
+                                    }
 
                                 },
                                 afterSlideLoad:function(anchorLink,index,i,slideIndex){
-                                    setTimeout(function(){
-                                        $($("#section0 .slide")[index]).addClass("animate");
-                                    },500)
+                                    // console.log(i)
+                                    if(i==0) {
+                                        setTimeout(function () {
+                                            $($("#section0 .slide")[i]).addClass("animate");
+                                        }, 500)
+                                    }else{
+                                        $($("#section0 .slide")[i]).addClass("animate");
+                                    }
                                 },afterRender:function () {
                                     var w=$(window).width()
                                     if (w >=860) {
