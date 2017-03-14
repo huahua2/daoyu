@@ -282,7 +282,7 @@ img {
       .business .right .con1 img {
         margin-top: 70px; }
       .business .right .con3 img {
-        margin-top: 70px; }
+        margin-top: 30px; }
 
   .change {
     width: 100%; }
@@ -439,23 +439,19 @@ img {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    -ms-transform: none;
     transform: none; } }
 @keyframes fadeInUpBig {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 2000px, 0);
-    -ms-transform: translate3d(0, 2000px, 0);
     transform: translate3d(0, 2000px, 0); }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    -ms-transform: none;
     transform: none; } }
 @-webkit-keyframes zoomIn {
   0% {
