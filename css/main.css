@@ -64,7 +64,13 @@ img {
   overflow: hidden; }
 
 #section1 {
-  background-image: url(../img/bg2.jpg); }
+  background-image: url(../img/bg2_2.jpg); }
+  #section1 .fp-tableCell {
+    text-align: center;
+    display: table-cell; }
+  #section1 img {
+    height: 667px;
+    opacity: 0; }
 
 #section2 {
   background-image: url(../img/bg3.jpg);
@@ -258,6 +264,12 @@ img {
   .banner3 {
     background-position: 55% 60%; } }
 @media (max-width: 860px) {
+  #section1 {
+    background-image: url(../img/bg2.jpg); }
+    #section1 img {
+      height: 400px;
+      opacity: 1; }
+
   .business {
     width: 100%;
     top: 0; }

@@ -82,8 +82,15 @@ img{
 }
 
 #section1 {
-  background-image: url(../img/bg2.jpg);
-
+  background-image: url(../img/bg2_2.jpg);
+  .fp-tableCell{
+    text-align: center;
+    display: table-cell;
+  }
+  img{
+    height: 667px;
+    opacity: 0;
+  }
 }
 
 #section2 {
@@ -328,6 +335,15 @@ img{
   }
 }
 @media (max-width: 860px){
+  #section1 {
+    background-image: url(../img/bg2.jpg);
+
+    img{
+      height: 400px;
+      opacity: 1;
+    }
+  }
+
   .business{
     width: 100%;
     top: 0;

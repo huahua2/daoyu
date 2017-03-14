@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>道昱官网首页</title>
+    <title>道昱科技官网</title>
 
     <link rel="shortcut icon" href="favicon.ico" />
     <style>
@@ -86,17 +86,61 @@
             animation-iteration-count: infinite;
             -webkit-animation-delay: 0;
             animation-delay: 0; }
+        .sj {
+            z-index: 700;
+            -webkit-animation: fadeOutDown 1s .8s linear infinite;
+            -moz-animation: fadeOutDown 1s .8s linear infinite;
+        }
+
+        @-webkit-keyframes fadeOutDown {
+            0% {
+                opacity: 1;
+                -webkit-transform: translateY(0)
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(20px)
+            }
+        }
+
+        @-moz-keyframes fadeOutDown {
+            0% {
+                opacity: 1;
+                -moz-transform: translateY(0)
+            }
+            100% {
+                opacity: 0;
+                -moz-transform: translateY(20px)
+            }
+        }
+
+        .arrow {
+            width: 25px;
+            height: 14px;
+            background: url(img/sj.png) no-repeat;
+            display: block;
+            position: absolute;
+            left: 50%;
+            margin-left: -13px;
+            bottom: 25px;
+            z-index: 7;
+            -webkit-animation: fadeOutDown 1s .8s linear infinite;
+            -moz-animation: fadeOutDown 1s .8s linear infinite;
+        }
+        #section0 .fp-slidesNav{
+            bottom: 45px;
+        }
     </style>
     <link rel="stylesheet" href="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css">
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/min.main.css"/>
     <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
     <!--<link rel="stylesheet" href="css/jquery.fullPage.min.css">-->
-    <!--<link rel="stylesheet" href="css/main.css"/>-->
+    <!--<link rel="stylesheet" href="css/min.main.css"/>-->
     <!--<script src="js/jquery.min.js"></script>-->
     <!--<script src="js/jquery.fullPage.min.js"></script>-->
-    <!--<script src="js/main.js"></script>-->
+    <!--<script src="js/main.min.js"></script>-->
 
 </head>
 
@@ -130,7 +174,7 @@
 <div id="fullpage">
     <div class="section" id="section0">
 
-
+        <span class="arrow"></span>
         <div class="slide banner1">
             <div class="box">
                 <div class="top"><span></span></div>
@@ -159,7 +203,7 @@
 
     </div>
     <div class="section" id="section1">
-
+        <img src="img/bg2-c2.png" alt=""/>
     </div>
     <div class="section" id="section2">
 

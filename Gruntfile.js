@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             js: {
               files: {
                 // 'static/v2/js/jquery-1.7.2.min.js': ['dev/v2/js/public/lib/jquery-1.7.2.min.js'],
-                'js/main.min.js': 'js/**/*.js'
+                'js/main.min.js': 'js/main.js'
               }
             }
         },
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
               files: {
 
                   'css/min.main.css': [
-                      "css/**/*.css"
+                      "css/main.css"
                   ]
                 //'static/v2/css/min.base.css': [
                 //    "dev/v2/css/home/base.css", "dev/v2/css/home/screen.css", "dev/v2/css/home/oneone.css"
