@@ -503,6 +503,11 @@ img{
 
 }
 @media (max-width: 420px){
+  #section1 {
+    img{
+      margin-top: 20px;
+    }
+  }
   .logo img {
     height: 52px;
   }
