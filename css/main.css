@@ -72,6 +72,12 @@ img {
 
 #section3 {
   background-image: url(../img/bg4.jpg); }
+  #section3 .fp-tableCell {
+    text-align: center;
+    display: table-cell; }
+  #section3 img {
+    height: 260px;
+    opacity: 0; }
 
 .slide {
   width: 33.333%;
@@ -184,7 +190,8 @@ img {
       left: 50%;
       margin-left: -272px;
       top: 50%;
-      margin-top: -208px; }
+      margin-top: -208px;
+      opacity: 0; }
 
 .business {
   width: 800px;
@@ -209,6 +216,7 @@ img {
     .business li a.on {
       border-bottom: solid 2px #cf2223; }
   .business .right {
+    top: -130px;
     margin-left: 206px;
     float: left;
     width: 700px;
@@ -232,6 +240,19 @@ img {
         height: 500px;
         width: 700px;
         float: left; }
+    .business .right .con {
+      padding-top: 130px; }
+    .business .right .con1 {
+      padding-top: 0; }
+      .business .right .con1 img {
+        height: 360px; }
+      .business .right .con1 .slide {
+        text-align: center; }
+    .business .right .con3 {
+      padding-top: 30px;
+      text-align: center; }
+      .business .right .con3 img {
+        height: 400px; }
 
 @media (max-width: 960px) and (max-height: 700px) {
   .banner3 {
@@ -256,6 +277,12 @@ img {
           width: 25%; }
         .business .right .scrolldiv p {
           padding: 0 10%; }
+      .business .right .con {
+        padding-top: 0; }
+      .business .right .con1 img {
+        margin-top: 70px; }
+      .business .right .con3 img {
+        margin-top: 70px; }
 
   .change {
     width: 100%; }
@@ -325,6 +352,20 @@ img {
     height: 288px;
     margin-left: -185px;
     margin-top: -144px; } }
+@media (max-width: 590px) {
+  .business .right .con1 img {
+    margin-top: 70px;
+    height: auto;
+    width: 95%; }
+  .business .right .con3 {
+    padding-top: 0px; }
+    .business .right .con3 img {
+      height: auto;
+      width: 95%; }
+
+  #section3 img {
+    height: auto;
+    width: 90%; } }
 @media (max-width: 420px) {
   .logo img {
     height: 52px; }
@@ -416,16 +457,14 @@ img {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; } }
-.fadeInUpBig {
-  -webkit-animation-name: fadeInUpBig;
-  animation-name: fadeInUpBig; }
-
 @-webkit-keyframes zoomIn {
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3); }
   50% {
+    opacity: 1; }
+  100% {
     opacity: 1; } }
 @keyframes zoomIn {
   0% {
@@ -434,6 +473,8 @@ img {
     -ms-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3); }
   50% {
+    opacity: 1; }
+  100% {
     opacity: 1; } }
 .animate .banner1 .top, .animate .banner1 .bottom {
   top: 0px;
@@ -445,12 +486,14 @@ img {
   opacity: 0.5;
   filter: alpha(opacity=50); }
 .animate.banner2 .box {
-  animation: fadeInLeft .5s both 0.3s;
-  -webkit-animation: fadeInLeft .5s both 0.3s; }
+  animation: fadeInLeft .5s linear 0.4s both;
+  -webkit-animation: fadeInLeft .5s linear 0.4s both; }
 .animate.banner3 .box span.camera {
-  animation: zoomIn 1s linear 0s 2;
-  -webkit-animation: zoomIn 1s linear 0s 2;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  animation: zoomIn 1s linear 0s 2 both;
+  -webkit-animation: zoomIn 1s linear 0s 2 both; }
+
+.active .contact {
+  animation: fadeInUpBig .5s linear 0.3s both;
+  -webkit-animation: fadeInUpBig .5s linear 0.3s both; }
 
 /*# sourceMappingURL=main.css.map */
