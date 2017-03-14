@@ -238,7 +238,7 @@ img {
       top: 0;
       width: 3000px;
       left: 0; }
-      .business .right .scrolldiv div {
+      .business .right .scrolldiv div.con {
         height: 500px;
         width: 700px;
         float: left; }
@@ -254,13 +254,15 @@ img {
       position: inherit;
       top: 100px;
       margin-top: 0; }
+    .business li a {
+      margin-bottom: 0; }
     .business .right {
       width: 100%;
-      top: 110px;
+      top: 100px;
       margin-left: 0; }
       .business .right .scrolldiv {
         width: 400%; }
-        .business .right .scrolldiv div {
+        .business .right .scrolldiv div.con {
           width: 25%; }
         .business .right .scrolldiv p {
           padding: 0 10%; }
@@ -382,7 +384,12 @@ img {
       width: 318px;
       height: 227px;
       margin-left: -173px;
-      margin-top: -114px; } }
+      margin-top: -114px; }
+
+  .business ul {
+    top: 80px; }
+  .business li a {
+    margin-bottom: 0; } }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background-color: #fff; }
 

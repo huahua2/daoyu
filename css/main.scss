@@ -293,12 +293,8 @@ img{
     height: 500px;
     position: relative;
     overflow: hidden;
-    .con1,.con2,.con3,.con4{
-      //margin-top: 130px;
-    }
-
     .scrolldiv{
-      div{
+      div.con{
         height: 500px;
         width: 700px;
         float: left;
@@ -327,14 +323,19 @@ img{
       top: 100px;
       margin-top: 0;
     }
+    li{
+      a{
+        margin-bottom: 0;
+      }
+    }
 
     .right{
       width: 100%;
-      top: 110px;
+      top: 100px;
       margin-left: 0;
       .scrolldiv{
         width: 400%;
-        div{
+        div.con{
           width: 25%;
         }
         p{
@@ -504,6 +505,16 @@ img{
       }
     }
 
+  }
+  .business {
+    ul{
+      top: 80px;
+    }
+    li {
+      a {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
