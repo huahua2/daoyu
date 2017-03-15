@@ -380,7 +380,7 @@ img {
     width: 90%; } }
 @media (max-width: 420px) {
   #section1 img {
-    margin-top: 20px; }
+    margin-top: 30px; }
 
   .logo img {
     height: 52px; }
