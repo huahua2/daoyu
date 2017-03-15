@@ -49,13 +49,15 @@ $(function(){
 
                                 },
                                 afterSlideLoad:function(anchorLink,index,i,slideIndex){
-                                    // console.log(i)
-                                    if(i==0) {
-                                        setTimeout(function () {
+                                    var c=$(this).attr("class");
+                                    if(c.indexOf("banner") > -1) {
+                                        if (i == 0) {
+                                            setTimeout(function () {
+                                                $($("#section0 .slide")[i]).addClass("animate");
+                                            }, 500)
+                                        } else {
                                             $($("#section0 .slide")[i]).addClass("animate");
-                                        }, 500)
-                                    }else{
-                                        $($("#section0 .slide")[i]).addClass("animate");
+                                        }
                                     }
                                 },afterRender:function () {
                                     var w=$(window).width()
