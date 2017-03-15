@@ -438,6 +438,11 @@ img {
     top: 100px; }
   .business li a {
     margin-bottom: 0; } }
+@media (min-width: 1300px) and (min-height: 760px) {
+  .business ul {
+    margin-top: 120px; }
+  .business .right .con1 img, .business .right .con3 img {
+    margin-top: 100px; } }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background-color: #fff; }
 

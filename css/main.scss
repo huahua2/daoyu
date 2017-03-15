@@ -593,6 +593,20 @@ img{
     }
   }
 }
+@media (min-width: 1300px) and (min-height:760px) {
+  .business {
+    ul{
+      margin-top: 120px;
+    }
+    .right {
+      .con1,.con3 {
+        img {
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+}
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background-color: #fff;
