@@ -24,6 +24,19 @@ img{
   z-index: 10;
   -webkit-transition: all .3s linear 0s;
   transition: all .3s linear 0s;
+  &.small{
+    .logo{
+      img{
+        height: 68px;
+      }
+    }
+    .nav{
+      margin-top: 30px;
+      a{
+        font-size: 16px;
+      }
+    }
+  }
 
 }
 .smenu{
@@ -42,15 +55,23 @@ img{
     display: inline-block;
   }
   img {
-    height: 68px;
+    height: 78px;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    &.small{
+      height: 68px;
+    }
   }
+
 }
 
 .nav {
   float: right;
-  margin-top: 30px;
+  margin-top: 37px;
   font-size: 0;
   margin-right: 100px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
   li {
     display: inline-block;
     margin-left: 30px;
@@ -59,9 +80,11 @@ img{
     display: inline-block;
     height: 30px;
     line-height: 30px;
-    font-size: 14px;
+    font-size: 18px;
     color: #fff;
     text-decoration: none;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
     &:hover,&.current{
       color: #f00;
     }
@@ -334,6 +357,21 @@ img{
     background-position:  55% 60%;
   }
 }
+@media (max-width: 950px){
+  .logo{
+    margin-left: 60px;
+    img{
+      height: 68px;
+    }
+  }
+  .nav{
+    margin-top: 30px;
+    margin-right: 60px;
+    a{
+      font-size: 16px;
+    }
+  }
+}
 @media (max-width: 860px){
   #section1 {
     background-image: url(../img/bg2.jpg);
@@ -471,6 +509,9 @@ img{
       }
     }
 
+  }
+  #fp-nav{
+    display: none;
   }
 }
 @media (max-width: 590px){
@@ -611,9 +652,37 @@ img{
   }
 }
 
+
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background-color: #fff;
 }
+#section0 .fp-slidesNav{
+  bottom: 55px;
+  ul{
+    li{
+      margin: 0;
+      width: 40px;
+      margin: 0 3.5px;
+      a{
+        span{
+          height: 3px;
+          width: 40px;
+          margin: 0;
+          border-radius: 0;
+          left: 0;
+        }
+        &.active span{
+          background: #f00;
+          margin: 0;
+          height: 3px;
+          font-size: 3px;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
