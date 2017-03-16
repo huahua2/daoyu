@@ -651,6 +651,15 @@ img{
     }
   }
 }
+@media (min-width: 861px){
+  .banner2{
+    .box {
+      width:auto;
+      left: 50%;
+      margin-left: -420px;
+    }
+  }
+}
 
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {

@@ -469,6 +469,11 @@ img {
 @media (min-width: 1300px) and (min-height: 760px) {
   .business .right .con {
     padding-top: 100px; } }
+@media (min-width: 861px) {
+  .banner2 .box {
+    width: auto;
+    left: 50%;
+    margin-left: -420px; } }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background-color: #fff; }
 
